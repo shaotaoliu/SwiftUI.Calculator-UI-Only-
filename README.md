@@ -1,4 +1,4 @@
-# SwiftUI.Calculator (UI Only)
+# SwiftUI.Calculator
 
 It creates a calculator just like the iPhone Calculator.
 
