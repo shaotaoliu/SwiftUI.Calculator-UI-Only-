@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A5DD02B276598940005776F /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5DD02A276598940005776F /* CalculatorButton.swift */; };
+		4ADFD1FF2769487F00B3565A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADFD1FE2769487F00B3565A /* ViewModel.swift */; };
 		83EE677A25F2771500FEBACA /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE677925F2771500FEBACA /* CalculatorApp.swift */; };
 		83EE677C25F2771500FEBACA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE677B25F2771500FEBACA /* ContentView.swift */; };
 		83EE677E25F2771700FEBACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EE677D25F2771700FEBACA /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		4A5DD02A276598940005776F /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		4ADFD1FE2769487F00B3565A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		83EE677625F2771500FEBACA /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EE677925F2771500FEBACA /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		83EE677B25F2771500FEBACA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				83EE677925F2771500FEBACA /* CalculatorApp.swift */,
 				83EE677B25F2771500FEBACA /* ContentView.swift */,
 				4A5DD02A276598940005776F /* CalculatorButton.swift */,
+				4ADFD1FE2769487F00B3565A /* ViewModel.swift */,
 				83EE677D25F2771700FEBACA /* Assets.xcassets */,
 				83EE678225F2771700FEBACA /* Info.plist */,
 				83EE677F25F2771700FEBACA /* Preview Content */,
@@ -143,6 +146,7 @@
 			files = (
 				83EE677C25F2771500FEBACA /* ContentView.swift in Sources */,
 				4A5DD02B276598940005776F /* CalculatorButton.swift in Sources */,
+				4ADFD1FF2769487F00B3565A /* ViewModel.swift in Sources */,
 				83EE677A25F2771500FEBACA /* CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,9 +275,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = 3798Z36XLV;
+				DEVELOPMENT_TEAM = YAZRH2W8WY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -281,8 +286,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.iosacademy.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cicimaya.SwiftUI-Calculator-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,9 +299,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = 3798Z36XLV;
+				DEVELOPMENT_TEAM = YAZRH2W8WY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -303,8 +310,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.iosacademy.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cicimaya.SwiftUI-Calculator-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

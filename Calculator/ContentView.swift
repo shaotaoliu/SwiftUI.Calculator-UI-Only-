@@ -1,21 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    private let buttons: [[CalculatorButton]] = [
-        [.clear, .negative, .percent, .divide],
-        [.seven, .eight, .nine, .mutliply],
-        [.four, .five, .six, .subtract],
-        [.one, .two, .three, .add],
-        [.zero, .decimal, .equal],
-    ]
-    
-    private let buttonSpacing: CGFloat = 15
-    private let buttonFontSize: CGFloat = 32
-    private let resultFontSize: CGFloat = 80
-    private let resultForegroundColor = Color.white
-    
-    @State var result = 0
+    @StateObject private var vm = ViewModel()
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -23,43 +9,44 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack(alignment: .trailing) {
-                Text("\(result)")
-                    .font(.system(size: resultFontSize))
-                    .foregroundColor(resultForegroundColor)
+                Text(vm.display)
+                    .font(.system(size: vm.resultFontSize))
+                    .foregroundColor(vm.resultForegroundColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.1)
                 
-                VStack(spacing: buttonSpacing) {
-                    ForEach(buttons, id:\.self) { row in
-                        HStack(spacing: buttonSpacing) {
+                VStack(spacing: vm.buttonSpacing) {
+                    ForEach(vm.buttons, id:\.self) { row in
+                        HStack(spacing: vm.buttonSpacing) {
                             ForEach(row, id:\.self) { button in
                                 Button(action: {
-                                    
+                                    vm.tapButton(button: button)
                                 }, label: {
                                     Text(button.rawValue)
-                                        .font(.system(size: buttonFontSize))
+                                        .font(.system(size: vm.buttonFontSize))
                                         .foregroundColor(button.foregroundColor)
                                         .frame(width: getButtonWidth(button: button), height: getButtonHeight())
+                                        .background(button.backgroundColor)
+                                        .cornerRadius(getButtonHeight() / 2)
                                 })
-                                    .background(button.backgroundColor)
-                                    .cornerRadius(getButtonHeight() / 2)
                             }
                         }
                     }
                 }
             }
-            .padding(buttonSpacing)
+            .padding(vm.buttonSpacing)
         }
     }
     
     func getButtonWidth(button: CalculatorButton) -> CGFloat {
         if button == .zero {
-            return (UIScreen.main.bounds.width - buttonSpacing * CGFloat(3)) / CGFloat(2)
+            return (UIScreen.main.bounds.width - vm.buttonSpacing * CGFloat(3)) / CGFloat(2)
         }
-        
-        return (UIScreen.main.bounds.width - buttonSpacing * CGFloat(5)) / CGFloat(4)
+        return getButtonHeight()
     }
     
     func getButtonHeight() -> CGFloat {
-        return (UIScreen.main.bounds.width - buttonSpacing * CGFloat(5)) / CGFloat(4)
+        return (UIScreen.main.bounds.width - vm.buttonSpacing * CGFloat(5)) / CGFloat(4)
     }
 }
 

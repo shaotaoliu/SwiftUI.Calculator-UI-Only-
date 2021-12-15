@@ -40,4 +40,13 @@ enum CalculatorButton: String {
             return Color(.darkGray)
         }
     }
+    
+    func `in`(_ buttons: [CalculatorButton]) -> Bool {
+        for button in buttons {
+            if button == self {
+                return true
+            }
+        }
+        return false
+    }
 }
